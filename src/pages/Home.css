@@ -1,0 +1,9 @@
+.hero {
+    background-image: url("../assets/hero.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 700px;
+}
