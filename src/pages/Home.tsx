@@ -1,8 +1,9 @@
 import "./Home.css"
+import Assistant from "./Assistant";
 import { useRef } from "react";
 
 function Home() {
-    const searchRef = useRef<HTMLDivElement>(null);
+    const searchRef = useRef<HTMLElement>(null);
 
     const handleScroll = () => {
         searchRef.current?.scrollIntoView({ 
@@ -24,16 +25,61 @@ function Home() {
                         </p>
                         <button onClick={handleScroll} className="btn btn-lg">はじめる <i className="bi bi-arrow-down"></i></button>
                     </div>
-                    
                 </section>
-                <section>
-                    <div ref={searchRef} className="mx-auto p-4 hero-content hero-container">
-                            <i className="bi bi-stars"> </i><span className="fw-bold">どこへ引っ越して、どんな住まいをお探しですか ?</span>
-                            <textarea className="form-control mt-2" rows={4} placeholder="例 : 大阪に引っ越す予定です。家賃は月10万円以下で、都心までの通勤時間は30分以内にしたいです。" maxLength={300}/>
-                            <div className="text-center">
-                                <button className="btn btn-primary btn-lg mt-3"><i className="bi bi-stars"> </i>住まいを探す</button>
+                <section id="features-section"  className="py-5">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-12 col-md-6 col-lg-3 border-end">
+                                <div className="d-flex align-items-center gap-3">
+                                    <i className="bi bi-robot fs-2"></i>
+                                    <div>
+                                        <h3 className="h5 mb-1">AI-Powered Search</h3>
+                                        <p className="mb-0">
+                                            Tell us what you want in natural language.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
+
+                            <div className="col-12 col-md-6 col-lg-3 border-end">
+                                <div className="d-flex align-items-center gap-3">
+                                    <i className="bi bi-train-front fs-2"></i>
+                                    <div>
+                                        <h3 className="h5 mb-1">Smart Recommendations</h3>
+                                        <p className="mb-0">
+                                            Get area and apartment suggestions that fit your needs.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-12 col-md-6 col-lg-3 border-end">
+                                <div className="d-flex align-items-center gap-3">
+                                    <i className="bi bi-map fs-2"></i>
+
+                                    <div>
+                                        <h3 className="h5 mb-1">Detailed Area Insights</h3>
+                                        <p className="mb-0">
+                                            See commute times, rent trends, and neighborhood details.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-12 col-md-6 col-lg-3">
+                                <div className="d-flex align-items-center gap-3">
+                                    <i className="bi bi-heart fs-2"></i>
+                                    <div>
+                                        <h3 className="h5 mb-1">Save & Compare</h3>
+                                        <p className="mb-0">
+                                            Save your favorite places and compare options easily.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                </section>
+                <section ref={searchRef}>
+                    <Assistant />
                 </section>
             
         </main>

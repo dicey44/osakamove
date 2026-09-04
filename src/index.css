@@ -9,8 +9,8 @@
 
     --nippon-green: #71866A;
 
-    --nippon-background: #F7F6F2;
-    --nippon-surface: #E8E6E0;
+    --nippon-background: #E8E6E0;
+    --nippon-surface: #dbd9d3;
 
     --nippon-text: #20242A;
     --nippon-muted: #687078;
@@ -26,6 +26,7 @@ body {
     margin: 0 auto;
     font-family: "Noto Sans JP", sans-serif;
     max-width: 1920px;
+    background-color: var(--nippon-background);
 }
 
 .btn-primary {

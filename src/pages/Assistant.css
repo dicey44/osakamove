@@ -1,0 +1,20 @@
+.assistant-container {
+    background-color: var(--nippon-surface);
+    border-radius: 10px;
+    width: 80%;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    transition: .2s;
+}
+
+.assistant-container:hover {
+    transform: scale(1.01);
+}
+
+.assistant-container > textarea {
+    border: 1.5px solid var(--nippon-muted);
+    background-color: whitesmoke;
+}
+
+.assistant-container > textarea:focus {
+    background-color: whitesmoke;
+}

@@ -40,8 +40,7 @@
     box-shadow: 0 0 0 4px rgba(115, 131, 148, 0.45);
 }
 
-.hero-content {
-    background-color: var(--nippon-primary);
-    border-radius: 5px;
-    
+#features-section .border-end {
+    border-right: 1px solid rgba(128, 128, 128, 0.34) !important;
 }
+
