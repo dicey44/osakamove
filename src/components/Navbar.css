@@ -1,15 +1,21 @@
 .navbar {
-    background-color: rgb(10, 10, 16);
+    background-color: white;
 }
 
-.nav-link {
-    color: white;
+.nav-link, .nav-link:visited {
+    color: var(--nippon-primary);
 }
 
-.nav-link:hover {
-    color: lightslategray;
+.nav-link:hover, .nav-link:active {
+     color: var(--nippon-primary-hover) !important;
 }
 
-.navbar-brand {
-    color: white;
+.nav-link:focus-visible, .navbar-brand:focus-visible {
+    box-shadow: 0 0 0 4px rgba(115, 131, 148, 0.45) !important;
+    outline: none;
 }
+
+.navbar-brand, .navbar-brand:visited {
+    color: black;
+}
+

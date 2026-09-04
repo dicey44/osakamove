@@ -1,13 +1,13 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Navbar.css"
 
 export default function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg">
             <div className="container">
-                <Link className="navbar-brand fw-bold" to="/">
+                <NavLink className="navbar-brand fw-bold" to="/">
                     NipponMove
-                </Link>
+                </NavLink>
 
                 <button
                     className="navbar-toggler"
@@ -23,13 +23,13 @@ export default function Navbar() {
 
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <div className="navbar-nav ms-auto">
-                        <Link className="nav-link" to="/">
+                        <NavLink className="nav-link" to="/">
                             ホーム
-                        </Link>
+                        </NavLink>
 
-                        <Link className="nav-link" to="/search">
+                        <NavLink className="nav-link" to="/search">
                             物件を探す
-                        </Link>
+                        </NavLink>
                     </div>
                 </div>
             </div>

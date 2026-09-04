@@ -8,8 +8,36 @@
 .hero-container {
     width: 50%;
     max-width: 700px;
-    text-shadow: 0 0 50px rgb(0, 0, 0);
     color: white;
+    
+}
+
+.banner-icon {
+    font-size: 4rem;
+    color: var(--nippon-primary);
+}
+
+.hero-container>h1, .hero-container>p {
+    text-shadow: 0 0 40px rgb(0, 0, 0);
+}
+
+.hero-container>.btn, .hero-container>.btn:active {
+    width: 200px;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    background: linear-gradient(to left, #25323e, #738394);
+    color: white;
+    transition: width 0.25s ease;
+}
+
+.hero-container > .btn:hover {
+    width: 230px;
+}
+
+.hero-container > .btn:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(115, 131, 148, 0.45);
 }
 
 .hero-content {
