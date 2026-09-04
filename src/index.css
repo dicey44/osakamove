@@ -1,13 +1,19 @@
-:root {
-    --bs-primary: #99b8cd;
-    --bs-primary-rgb: 153, 184, 205;
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap');
 
-.btn-primary {
-    --bs-btn-bg: #99b8cd;
-    --bs-btn-border-color: #99b8cd;
-    --bs-btn-hover-bg: #7fa5bd;
-    --bs-btn-hover-border-color: #7fa5bd;
+:root {
+    --nippon-primary: #314150;
+    --nippon-primary-hover: #16202A;
+
+    --nippon-secondary: #9A7357;
+    --nippon-secondary-hover: #7E5C45;
+
+    --nippon-green: #71866A;
+
+    --nippon-background: #F7F6F2;
+    --nippon-surface: #E8E6E0;
+
+    --nippon-text: #20242A;
+    --nippon-muted: #687078;
 }
 
 * {
@@ -18,4 +24,34 @@
 
 body {
     margin: 0 auto;
+    font-family: "Noto Sans JP", sans-serif;
+    max-width: 1920px;
+}
+
+.btn-primary {
+    background-color: var(--nippon-primary);
+    border-color: var(--nippon-primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--nippon-primary-hover);
+    border-color: var(--nippon-primary-hover);
+}
+
+.btn-primary:active, 
+.btn-primary:first-child:active, 
+:not(.btn-check) + .btn-primary:active {
+    background-color: var(--nippon-primary-hover);
+    border-color: var(--nippon-primary-hover);
+}
+
+.btn-primary:focus, .btn-primary:focus-visible {
+    background-color: var(--nippon-primary-hover);
+    border-color: var(--nippon-primary-hover);
+    box-shadow: 0 0 0 0.25rem rgba(49, 65, 80, .35);
+}
+
+.form-control:active, .form-control:focus {
+    border-color: white;
+    box-shadow: 0 0 0 .25rem rgba(49, 65, 80, .35);
 }

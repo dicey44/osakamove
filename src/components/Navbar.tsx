@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import "./Navbar.css"
 
 export default function Navbar() {
     return (
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <nav className="navbar navbar-expand-lg bg-light">
             <div className="container">
                 <Link className="navbar-brand fw-bold" to="/">
                     NipponMove

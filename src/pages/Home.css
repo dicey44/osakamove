@@ -2,8 +2,18 @@
     background-image: url("../assets/hero.png");
     background-size: cover;
     background-position: center;
+    height: 96vh;
+}
+
+.hero-container {
+    width: 50%;
+    max-width: 700px;
+    text-shadow: 0 0 50px rgb(0, 0, 0);
+    color: white;
 }
 
 .hero-content {
-    max-width: 700px;
+    background-color: var(--nippon-primary);
+    border-radius: 5px;
+    
 }

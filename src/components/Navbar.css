@@ -1,0 +1,7 @@
+.nav-link {
+    color: var(--nippon-muted);
+}
+
+.nav-link:hover {
+    color: var(--nippon-primary-hover);
+}
