@@ -1,7 +1,15 @@
+.navbar {
+    background-color: rgb(10, 10, 16);
+}
+
 .nav-link {
-    color: var(--nippon-muted);
+    color: white;
 }
 
 .nav-link:hover {
-    color: var(--nippon-primary-hover);
+    color: lightslategray;
+}
+
+.navbar-brand {
+    color: white;
 }
