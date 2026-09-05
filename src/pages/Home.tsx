@@ -81,6 +81,9 @@ function Home() {
                 <section ref={searchRef}>
                     <Assistant />
                 </section>
+                <section id="featured-apartments">
+                    
+                </section>
             
         </main>
         

@@ -6,6 +6,7 @@ export default function Navbar() {
         <nav className="navbar navbar-expand-lg">
             <div className="container">
                 <NavLink className="navbar-brand fw-bold" to="/">
+                <i className="bi bi-house-heart-fill"> </i>
                     NipponMove
                 </NavLink>
 
