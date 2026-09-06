@@ -48,6 +48,17 @@ app.post("/api/ai-test", async (req, res) => {
             consistent and suitable for matching against application data.
             - Use simple IDs such as "fukushima", "tennoji", or "naniwa".
             - The ID should not contain spaces.
+            - Extract any property requirements explicitly stated or clearly implied
+            by the user's request.
+            - Return numerical requirements in the criteria object.
+            - maxRent should be the maximum monthly rent in Japanese yen.
+            - minSize should be the minimum property size in square meters.
+            - petFriendly should be true only when the user wants a pet-friendly property.
+            - maxWalkToStation should be the maximum walking time to a station in minutes.
+            - If the user does not specify a criterion, return null.
+            - Never invent requirements that the user did not provide.
+            - Do not give a score unless you are ranking multiple things.
+            - The score you give should always be a whole number out of ten, never exceeding ten.
             `,
             input: message,
 
@@ -74,15 +85,40 @@ app.post("/api/ai-test", async (req, res) => {
                                             type: "string",
                                         },
                                         score: {
-                                            type: "number",
+                                            type: ["number", "null"],                
                                         },
                                     },
                                     required: ["id", "name", "reason", "score"],
                                     additionalProperties: false,
                                 },
                             },
+
+                            criteria: {
+                                type: "object",
+                                properties: {
+                                    maxRent: {
+                                        type: ["number", "null"],
+                                    },
+                                    minSize: {
+                                        type: ["number", "null"]
+                                    },
+                                    petFriendly: {
+                                        type: ["boolean", "null"]
+                                    },
+                                    maxWalkToStation: {
+                                        type: ["number", "null"]
+                                    },
+                                },
+                                required: [
+                                    "maxRent",
+                                    "minSize",
+                                    "petFriendly",
+                                    "maxWalkToStation",
+                                ],
+                                additionalProperties: false,
+                            },
                         },
-                        required: ["areas"],
+                        required: ["areas", "criteria"],
                         additionalProperties: false,
                     },
                 },

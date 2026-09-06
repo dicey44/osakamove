@@ -32,6 +32,7 @@ function Assistant() {
             }
 
             const data = await result.json();
+            console.log("AI response:", data.response);
 
             const matchedProperties = matchProperties(properties, data.response.areas);
             setMatchedProperties(matchedProperties);
@@ -73,7 +74,7 @@ function Assistant() {
                             <div key={area.name} className="mb-4">
                                 <h3>{area.name}</h3>
                                 <p>{area.reason}</p>
-                                <strong>Score: {area.score}/10</strong>
+                                {area.score && (<strong>Score: {area.score}/10</strong>)}
                             </div>
                         ))}
                     </div>
