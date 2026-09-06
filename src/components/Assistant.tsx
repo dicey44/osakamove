@@ -1,5 +1,6 @@
 import "./Assistant.css"
 import { useState } from "react";
+import { matchApartments } from "../utils/matchApartments";
 
 function Assistant() {
     const [input, setInput] = useState("");
@@ -37,6 +38,37 @@ function Assistant() {
             setLoading(false);
         }
     };
+
+    const testApartments = [
+    {
+        id: 1,
+        ward: "北区",
+    },
+    {
+        id: 2,
+        ward: "福島区",
+    },
+    {
+        id: 3,
+        ward: "天王寺区",
+    },
+];
+
+const testAreas = [
+    {
+        id: "kita",
+    },
+    {
+        id: "fukushima",
+    },
+];
+
+const matchedApartments = matchApartments(
+    testApartments,
+    testAreas
+);
+
+console.log(matchedApartments);
 
     return (
         <section className="py-5">

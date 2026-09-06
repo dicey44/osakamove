@@ -1,6 +1,6 @@
 import type { Property } from "../types/property"
 
-const properties: Property[] = [
+export const properties: Property[] = [
     {
         id: 1,
         type: "マンション",
