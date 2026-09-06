@@ -3,7 +3,7 @@ import { useState } from "react";
 
 function Assistant() {
     const [input, setInput] = useState("");
-    const [response, setResponse] = useState("");
+    const [response, setResponse] = useState<any>(null);
     const [loading, setLoading] = useState(false);
 
     const askAI = async () => {
@@ -60,9 +60,15 @@ function Assistant() {
                 </button>
 
                 {response && (
-                    <p className="mt-4">
-                        {response}
-                    </p>
+                    <div className="mt-4">
+                        {response.areas.map((area: any) => (
+                            <div key={area.name} className="mb-4">
+                                <h3>{area.name}</h3>
+                                <p>{area.reason}</p>
+                                <strong>Score: {area.score}/10</strong>
+                            </div>
+                        ))}
+                    </div>
                 )}
             </div>
         </section>

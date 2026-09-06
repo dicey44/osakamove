@@ -46,10 +46,44 @@ app.post("/api/ai-test", async (req, res) => {
             - If someone says they are a foreigner, always add a disclaimer that you cannot give accurate information on whether foreigners are accepted at a property.
             `,
             input: message,
+
+            text: {
+                format: {
+                    type: "json_schema",
+                    name: "area_recommendations",
+                    strict: true,
+                    schema: {
+                        type: "object",
+                        properties: {
+                            areas: {
+                                type: "array",
+                                items: {
+                                    type: "object",
+                                    properties: {
+                                        name: {
+                                            type: "string",
+                                        },
+                                        reason: {
+                                            type: "string",
+                                        },
+                                        score: {
+                                            type: "number",
+                                        },
+                                    },
+                                    required: ["name", "reason", "score"],
+                                    additionalProperties: false,
+                                },
+                            },
+                        },
+                        required: ["areas"],
+                        additionalProperties: false,
+                    },
+                },
+            },
         });
 
         res.json({
-            response: response.output_text,
+            response: JSON.parse(response.output_text),
         });
 
     } catch (error) {
