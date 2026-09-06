@@ -27,16 +27,16 @@ function Home() {
                         <button onClick={handleScroll} className="btn btn-lg">はじめる <i className="bi bi-arrow-down"></i></button>
                     </div>
                 </section>
-                <section id="features-section"  className="py-5">
+                <section id="features-section" className="py-5">
                     <div className="container">
                         <div className="row">
                             <div className="col-12 col-md-6 col-lg-3 border-end">
                                 <div className="d-flex align-items-center gap-3">
                                     <i className="bi bi-robot fs-2"></i>
                                     <div>
-                                        <h3 className="h5 mb-1">AI-Powered Search</h3>
+                                        <h3 className="h5 mb-1">AI搭載の物件検索</h3>
                                         <p className="mb-0">
-                                            Tell us what you want in natural language.
+                                            希望条件を自然な言葉で入力するだけで、ぴったりの物件を探せます。
                                         </p>
                                     </div>
                                 </div>
@@ -46,32 +46,33 @@ function Home() {
                                 <div className="d-flex align-items-center gap-3">
                                     <i className="bi bi-train-front fs-2"></i>
                                     <div>
-                                        <h3 className="h5 mb-1">Smart Recommendations</h3>
+                                        <h3 className="h5 mb-1">おすすめ物件・エリア</h3>
                                         <p className="mb-0">
-                                            Get area and apartment suggestions that fit your needs.
+                                            あなたの希望やライフスタイルに合ったエリアや物件をご提案します。
                                         </p>
                                     </div>
                                 </div>
                             </div>
+
                             <div className="col-12 col-md-6 col-lg-3 border-end">
                                 <div className="d-flex align-items-center gap-3">
                                     <i className="bi bi-map fs-2"></i>
-
                                     <div>
-                                        <h3 className="h5 mb-1">Detailed Area Insights</h3>
+                                        <h3 className="h5 mb-1">エリア情報を詳しくチェック</h3>
                                         <p className="mb-0">
-                                            See commute times, rent trends, and neighborhood details.
+                                            通勤時間や家賃相場、周辺環境など、暮らしに役立つ情報を確認できます。
                                         </p>
                                     </div>
                                 </div>
                             </div>
+
                             <div className="col-12 col-md-6 col-lg-3">
                                 <div className="d-flex align-items-center gap-3">
                                     <i className="bi bi-heart fs-2"></i>
                                     <div>
-                                        <h3 className="h5 mb-1">Save & Compare</h3>
+                                        <h3 className="h5 mb-1">お気に入り・比較</h3>
                                         <p className="mb-0">
-                                            Save your favorite places and compare options easily.
+                                            気になる物件を保存して、複数の候補を簡単に比較できます。
                                         </p>
                                     </div>
                                 </div>
