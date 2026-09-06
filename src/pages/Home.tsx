@@ -1,5 +1,5 @@
 import "./Home.css"
-import Assistant from "./Assistant";
+import Assistant from "../components/Assistant";
 import { useRef } from "react";
 
 

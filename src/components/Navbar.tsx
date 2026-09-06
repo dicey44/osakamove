@@ -7,7 +7,7 @@ export default function Navbar() {
             <div className="container">
                 <NavLink className="navbar-brand fw-bold" to="/">
                 <i className="bi bi-house-heart-fill"> </i>
-                    NipponMove
+                    OsakaMove
                 </NavLink>
 
                 <button

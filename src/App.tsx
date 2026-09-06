@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Search from "./pages/Search";
 import ListingDetails from "./pages/ListingDetails";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
     return (
@@ -16,6 +17,8 @@ function App() {
               <Route path="/search" element={<Search />} />
               <Route path="/listings/:id" element={<ListingDetails />} />
           </Routes>
+
+          <Footer />
         </BrowserRouter>
     );
 }
