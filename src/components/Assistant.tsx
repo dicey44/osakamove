@@ -2,32 +2,70 @@ import "./Assistant.css"
 import { useState } from "react";
 
 function Assistant() {
-    const [message, setMessage] = useState("");
+    const [input, setInput] = useState("");
+    const [response, setResponse] = useState("");
+    const [loading, setLoading] = useState(false);
 
-    async function testBackend() {
+    const askAI = async () => {
+        if (!input.trim()) return;
+
+        setLoading(true);
+        setResponse("");
+
         try {
-            const response = await fetch("http://localhost:3001/api/test");
-            const data = await response.json();
-            setMessage(data.message);
+            const result = await fetch("http://localhost:3001/api/ai-test", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    message: input,
+                }),
+            });
+
+            if (!result.ok) {
+                throw new Error("Request failed");
+            }
+
+            const data = await result.json();
+
+            setResponse(data.response);
         } catch (error) {
             console.error(error);
-            setMessage("Could not connect to backend.");
+            setResponse("AIに接続できませんでした。");
+        } finally {
+            setLoading(false);
         }
-    }
+    };
 
     return (
-        <div  className="mx-auto my-4 p-4 assistant-container">
-            <i className="bi bi-stars"> </i><span className="fw-bold">どこへ引っ越して、どんな住まいをお探しですか ?</span>
-            <textarea className="form-control mt-2 py-2" rows={5} placeholder="例 : 大阪に引っ越す予定です。家賃は月10万円以下で、都心までの通勤時間は30分以内にしたいです。" maxLength={300}/>
-            <div className="text-center">
-                <button className="btn btn-primary btn-lg mt-3"><i className="bi bi-stars"> </i>住まいを探す</button>
-            </div>
-            <button onClick={testBackend}>
-                Test Backend
-            </button>
+        <section className="py-5">
+            <div className="container">
+                <h2>AIアシスタント</h2>
 
-            <p>{message}</p>
-        </div>
+                <textarea
+                    className="form-control mb-3"
+                    rows={4}
+                    value={input}
+                    onChange={(e) => setInput(e.target.value)}
+                    placeholder="メッセージを入力してください"
+                />
+
+                <button
+                    className="btn btn-primary"
+                    onClick={askAI}
+                    disabled={loading}
+                >
+                    {loading ? "考え中..." : "AIに聞く"}
+                </button>
+
+                {response && (
+                    <p className="mt-4">
+                        {response}
+                    </p>
+                )}
+            </div>
+        </section>
     );
 }
 
