@@ -44,6 +44,10 @@ app.post("/api/ai-test", async (req, res) => {
             - Give practical recommendations that would help someone actually choose
             where to live.
             - If someone says they are a foreigner, always add a disclaimer that you cannot give accurate information on whether foreigners are accepted at a property.
+            - For each recommended area, provide a lowercase English ID that is
+            consistent and suitable for matching against application data.
+            - Use simple IDs such as "fukushima", "tennoji", or "naniwa".
+            - The ID should not contain spaces.
             `,
             input: message,
 
