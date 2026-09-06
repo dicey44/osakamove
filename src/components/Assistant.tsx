@@ -1,6 +1,6 @@
 import "./Assistant.css"
 import { useState } from "react";
-import { matchProperties } from "../utils/matchProperties";
+import { findRecommendedProperties } from "../utils/findRecommendedProperties";
 import { properties } from "../data/properties";
 import type { Property } from "../types/property";
 
@@ -34,7 +34,7 @@ function Assistant() {
             const data = await result.json();
             console.log("AI response:", data.response);
 
-            const matchedProperties = matchProperties(properties, data.response.areas);
+            const matchedProperties = findRecommendedProperties(properties, data.response.areas, data.response.criteria);
             setMatchedProperties(matchedProperties);
 
             setResponse(data.response);
