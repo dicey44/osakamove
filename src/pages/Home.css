@@ -51,6 +51,7 @@
 
 #featured-apartments .card {
     transition: .1s;
+    cursor: pointer;
 }
 
 #featured-apartments .card:hover {

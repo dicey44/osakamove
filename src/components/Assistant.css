@@ -18,3 +18,17 @@
 .assistant-container > textarea:focus {
     background-color: whitesmoke;
 }
+
+#recommended-properties .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+#recommended-properties .card {
+    transition: .1s;
+    cursor: pointer;
+}
+
+#recommended-properties .card:hover {
+    transform: scale(1.01);
+}

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { findRecommendedProperties } from "../utils/findRecommendedProperties";
 import { properties } from "../data/properties";
 import type { Property } from "../types/property";
+import PropertyCard from "./PropertyCard";
 
 function Assistant() {
     const [input, setInput] = useState("");
@@ -83,13 +84,15 @@ function Assistant() {
                     <div className="mt-5">
                         <h2>Recommended Properties</h2>
 
-                        {matchedProperties.map((property) => (
-                            <div key={property.id} className="mb-4">
-                                <h3>{property.title}</h3>
-                                <p>{property.ward}</p>
-                                <p>¥{property.rent.toLocaleString()} / month</p>
-                            </div>
-                        ))}
+                        <div className="row g-4" id="recommended-properties">
+                            
+                            {matchedProperties.map((property) => (
+                                <div key={property.id} className="col-12 col-md-6 col-lg-4">
+                                    <PropertyCard property={property} />
+                                </div>
+                            ))}
+                            
+                        </div>
                     </div>
                 )}
             </div>
