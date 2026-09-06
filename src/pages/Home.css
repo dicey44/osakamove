@@ -44,16 +44,16 @@
     border-right: 1px solid rgba(128, 128, 128, 0.34) !important;
 }
 
-#featured-apartments .card-img-top {
+#featured-properties .card-img-top {
     height: 200px;
     object-fit: cover;
 }
 
-#featured-apartments .card {
+#featured-properties .card {
     transition: .1s;
     cursor: pointer;
 }
 
-#featured-apartments .card:hover {
+#featured-properties .card:hover {
     transform: scale(1.01);
 }

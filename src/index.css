@@ -25,7 +25,6 @@
 body {
     margin: 0 auto;
     font-family: "Noto Sans JP", sans-serif;
-    max-width: 1920px;
     background-color: var(--nippon-background);
 }
 

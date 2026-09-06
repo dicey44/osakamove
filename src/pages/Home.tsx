@@ -15,7 +15,7 @@ function Home() {
 
     return (
         <main>
-                <section className="hero py-5 d-flex align-items-center">
+                <section className="container-fluid hero py-5 d-flex align-items-center">
                     <div className="hero-container text-center mx-5">
                         <i className="bi bi-house-heart-fill banner-icon"></i>
                         <h1 className="display-4 fw-bold">
@@ -83,7 +83,7 @@ function Home() {
                 <section ref={searchRef}>
                     <Assistant />
                 </section>
-                <section id="featured-apartments" className="container py-5">
+                <section id="featured-properties" className="container py-5">
                     <h2 className="mb-4">おすすめ物件</h2>
 
                     <div className="row g-4">
