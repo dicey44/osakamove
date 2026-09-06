@@ -2,11 +2,13 @@ import "./Assistant.css"
 import { useState } from "react";
 import { matchProperties } from "../utils/matchProperties";
 import { properties } from "../data/properties";
+import type { Property } from "../types/property";
 
 function Assistant() {
     const [input, setInput] = useState("");
     const [response, setResponse] = useState<any>(null);
     const [loading, setLoading] = useState(false);
+    const [matchedProperties, setMatchedProperties] = useState<Property[]>([])
 
     const askAI = async () => {
         if (!input.trim()) return;
@@ -32,7 +34,7 @@ function Assistant() {
             const data = await result.json();
 
             const matchedProperties = matchProperties(properties, data.response.areas);
-            console.log("Matched properties:", matchedProperties);
+            setMatchedProperties(matchedProperties);
 
             setResponse(data.response);
         } catch (error) {
@@ -72,6 +74,19 @@ function Assistant() {
                                 <h3>{area.name}</h3>
                                 <p>{area.reason}</p>
                                 <strong>Score: {area.score}/10</strong>
+                            </div>
+                        ))}
+                    </div>
+                )}
+                {matchedProperties.length > 0 && (
+                    <div className="mt-5">
+                        <h2>Recommended Properties</h2>
+
+                        {matchedProperties.map((property) => (
+                            <div key={property.id} className="mb-4">
+                                <h3>{property.title}</h3>
+                                <p>{property.ward}</p>
+                                <p>¥{property.rent.toLocaleString()} / month</p>
                             </div>
                         ))}
                     </div>
