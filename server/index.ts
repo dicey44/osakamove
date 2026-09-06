@@ -60,6 +60,9 @@ app.post("/api/ai-test", async (req, res) => {
                                 items: {
                                     type: "object",
                                     properties: {
+                                        id: {
+                                            type: "string",
+                                        },
                                         name: {
                                             type: "string",
                                         },
@@ -70,7 +73,7 @@ app.post("/api/ai-test", async (req, res) => {
                                             type: "number",
                                         },
                                     },
-                                    required: ["name", "reason", "score"],
+                                    required: ["id", "name", "reason", "score"],
                                     additionalProperties: false,
                                 },
                             },
