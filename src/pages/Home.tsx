@@ -1,6 +1,6 @@
 import "./Home.css"
 import Assistant from "../components/Assistant";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 
 
 function Home() {
@@ -12,6 +12,28 @@ function Home() {
             block: 'start'
         });
     };
+
+    useEffect(() => {
+        const sections = document.querySelectorAll(".scroll-animation");
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            {
+                threshold: 0.15
+            }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+
+        return () => observer.disconnect();
+    }, []);
 
     return (
         <main>
@@ -27,7 +49,7 @@ function Home() {
                         <button onClick={handleScroll} className="btn btn-lg">はじめる <i className="bi bi-arrow-down"></i></button>
                     </div>
                 </section>
-                <section id="features-section" className="py-5">
+                <section id="features-section" className="py-5 scroll-animation">
                     <div className="container">
                         <div className="row">
                             <div className="col-12 col-md-6 col-lg-3 border-end">
@@ -80,7 +102,7 @@ function Home() {
                         </div>
                     </div>
                 </section>
-                <section ref={searchRef} id="search">
+                <section ref={searchRef} id="search" className="scroll-animation">
                     <Assistant />
                 </section>
                 

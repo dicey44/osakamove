@@ -83,7 +83,7 @@ function Assistant() {
                 </button>
 
                 {response && (
-                    <div className="mt-4">
+                    <div className="mt-4 ai-response">
                         {response.areas.map((area: any) => (
                             <div key={area.name} className="mb-4">
                                 <h3>{area.name}</h3>

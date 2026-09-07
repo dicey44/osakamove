@@ -26,7 +26,6 @@
 
 #recommended-properties .card {
     transition: .1s;
-    cursor: pointer;
 }
 
 #recommended-properties .card:hover {
@@ -63,5 +62,21 @@
     30% {
         transform: translateY(-5px);
         opacity: 1;
+    }
+}
+
+.ai-response {
+    animation: responseSlideIn 0.7s ease forwards;
+}
+
+@keyframes responseSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
