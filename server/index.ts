@@ -47,6 +47,7 @@ app.post("/api/ai-test", async (req, res) => {
             - For each recommended area, provide a lowercase English ID that is
             consistent and suitable for matching against application data.
             - Use simple IDs such as "fukushima", "tennoji", or "naniwa".
+            - The ID should be the ward that the neighborhood is in, not the neighborhood itself.
             - The ID should not contain spaces.
             - Extract any property requirements explicitly stated or clearly implied
             by the user's request.
@@ -55,6 +56,8 @@ app.post("/api/ai-test", async (req, res) => {
             - minSize should be the minimum property size in square meters.
             - petFriendly should be true only when the user wants a pet-friendly property.
             - maxWalkToStation should be the maximum walking time to a station in minutes.
+            - buildingType should specify whether it is an apartment or house.
+            - buildingType should only be "house" or "apartment".
             - If the user does not specify a criterion, return null.
             - Never invent requirements that the user did not provide.
             - Do not give a score unless you are ranking multiple things.
@@ -108,12 +111,16 @@ app.post("/api/ai-test", async (req, res) => {
                                     maxWalkToStation: {
                                         type: ["number", "null"]
                                     },
+                                    buildingType: {
+                                        type: ["string", "null"]
+                                    },
                                 },
                                 required: [
                                     "maxRent",
                                     "minSize",
                                     "petFriendly",
                                     "maxWalkToStation",
+                                    "buildingType",                                    
                                 ],
                                 additionalProperties: false,
                             },

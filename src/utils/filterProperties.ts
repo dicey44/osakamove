@@ -5,9 +5,18 @@ export type Criteria = {
     minSize: number | null;
     petFriendly: boolean | null;
     maxWalkToStation: number | null;
+    buildingType: string | null;
 }
 
 export function filterProperties(properties: Property[], criteria: Criteria) {
+
+    let isApartment = false;
+
+    if (criteria.buildingType === "apartment") {
+        isApartment = true;
+    }
+
+
     return properties.filter(property => {
         if (
             criteria.maxRent !== null &&
@@ -36,6 +45,17 @@ export function filterProperties(properties: Property[], criteria: Criteria) {
         ) {
             return false;
         }
+
+        if (
+            (!isApartment && property.type === "アパート") 
+            ||
+            (!isApartment && property.type === "マンション")
+            ||
+            (isApartment && property.type === "一戸建て")
+        ) {
+            return false;
+        }
+        
 
         return true;
     })

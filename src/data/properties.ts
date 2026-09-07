@@ -132,7 +132,7 @@ export const properties: Property[] = [
         line: "ＪＲ大阪環状線",
         yearsOld: 21,
         petFriendly: true,
-        image: "/houses/house-2.jpeg"
+        image: "/houses/house-2.webp"
     },
 
     {
@@ -251,7 +251,7 @@ export const properties: Property[] = [
         line: "ＪＲ阪和線",
         yearsOld: 18,
         petFriendly: true,
-        image: "/houses/house-4.jpeg"
+        image: "/houses/house-4.webp"
     },
 
     {
@@ -302,7 +302,7 @@ export const properties: Property[] = [
         line: "地下鉄四つ橋線",
         yearsOld: 4,
         petFriendly: true,
-        image: "/apartments/apartment-14.webp"
+        image: "/apartments/apartment-14.jpeg"
     },
 
     {
@@ -319,7 +319,7 @@ export const properties: Property[] = [
         line: "地下鉄谷町線",
         yearsOld: 31,
         petFriendly: false,
-        image: "/houses/house-5.jpeg"
+        image: "/houses/house-5.webp"
     },
 
     {
@@ -336,7 +336,7 @@ export const properties: Property[] = [
         line: "地下鉄四つ橋線",
         yearsOld: 12,
         petFriendly: true,
-        image: "/apartments/apartment-15.webp"
+        image: "/apartments/apartment-15.jpeg"
     },
 
     {
@@ -370,7 +370,7 @@ export const properties: Property[] = [
         line: "地下鉄谷町線",
         yearsOld: 14,
         petFriendly: true,
-        image: "/apartments/apartment-17.webp"
+        image: "/apartments/apartment-17.jpeg"
     },
     {
         id: 23,
@@ -403,7 +403,7 @@ export const properties: Property[] = [
         line: "近鉄南大阪線",
         yearsOld: 24,
         petFriendly: true,
-        image: "/houses/house-6.jpeg"
+        image: "/houses/house-6.webp"
     },
 
     {

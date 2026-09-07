@@ -35,9 +35,9 @@ function Assistant() {
             const data = await result.json();
             console.log("AI response:", data.response);
 
-            const matchedProperties = findRecommendedProperties(properties, data.response.areas, data.response.criteria);
-            setMatchedProperties(matchedProperties);
-
+            const goodProperties = findRecommendedProperties(properties, data.response.areas, data.response.criteria);
+            setMatchedProperties(goodProperties);
+            console.log(goodProperties);
             setResponse(data.response);
         } catch (error) {
             console.error(error);
@@ -80,9 +80,10 @@ function Assistant() {
                         ))}
                     </div>
                 )}
+
                 {matchedProperties.length > 0 && (
                     <div className="mt-5">
-                        <h2>Recommended Properties</h2>
+                        <h2>おすすめ物件</h2>
 
                         <div className="row g-4" id="recommended-properties">
                             
