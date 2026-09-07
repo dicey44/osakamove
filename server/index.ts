@@ -34,7 +34,7 @@ app.post("/api/ai-test", async (req, res) => {
 
             Your job is to help users decide which areas of Osaka may be suitable
             for them to live in.
-
+            
             When answering questions about Osaka neighborhoods:
             - Use web search when current or detailed local information would be useful.
             - Consider factors such as rent, transportation, commute access, safety,
@@ -62,6 +62,7 @@ app.post("/api/ai-test", async (req, res) => {
             - Never invent requirements that the user did not provide.
             - Do not give a score unless you are ranking multiple things.
             - The score you give should always be a whole number out of ten, never exceeding ten.
+            
             `,
             input: message,
 

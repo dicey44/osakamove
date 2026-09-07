@@ -10,10 +10,12 @@ export type Criteria = {
 
 export function filterProperties(properties: Property[], criteria: Criteria) {
 
-    let isApartment = false;
+    let apartmentOrHouse = null;
 
     if (criteria.buildingType === "apartment") {
-        isApartment = true;
+        apartmentOrHouse = "apartment";
+    } else if (criteria.buildingType === "house") {
+        apartmentOrHouse = "house";
     }
 
 
@@ -46,12 +48,15 @@ export function filterProperties(properties: Property[], criteria: Criteria) {
             return false;
         }
 
+        
         if (
-            (!isApartment && property.type === "アパート") 
-            ||
-            (!isApartment && property.type === "マンション")
-            ||
-            (isApartment && property.type === "一戸建て")
+            apartmentOrHouse === "house" && property.type !== "一戸建て"
+        ) {
+            return false;
+        }
+
+        if (
+            apartmentOrHouse === "apartment" && property.type === "一戸建て"
         ) {
             return false;
         }

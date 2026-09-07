@@ -2,7 +2,7 @@
     background-color: var(--nippon-surface) !important
 }
 
-.nav-link, .nav-link:visited, .nav-link:active {
+.nav-link, .nav-link:visited {
     color: var(--nippon-muted) !important;
 }
 

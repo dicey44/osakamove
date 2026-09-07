@@ -14,6 +14,9 @@ export function findRecommendedProperties(
 ) {
     const areaMatches = matchProperties(properties, areas);
 
+    console.log("this is areaMatches");
+    console.log(areaMatches)
+
     const filteredProperties = filterProperties(
         areaMatches,
         criteria
