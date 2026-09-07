@@ -80,7 +80,7 @@ function Home() {
                         </div>
                     </div>
                 </section>
-                <section ref={searchRef}>
+                <section ref={searchRef} id="search">
                     <Assistant />
                 </section>
                 

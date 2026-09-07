@@ -62,11 +62,24 @@ function Assistant() {
                 />
 
                 <button
+                    id="ask-ai-btn"
                     className="btn btn-primary"
                     onClick={askAI}
                     disabled={loading}
                 >
-                    {loading ? "考え中..." : "AIに聞く"}
+                    <div className="d-flex align-items-center gap-2 text-muted">
+                        <i className="bi bi-robot fs-4"></i>
+                        <span>{loading ? "条件を分析しています" : "AIに聞く"}</span>
+                        
+                            {loading && 
+                            <span className="d-flex gap-1">
+                                <span className="thinking-dot"></span>
+                                <span className="thinking-dot"></span>
+                                <span className="thinking-dot"></span>
+                            </span>
+                            }                           
+                        
+                    </div>
                 </button>
 
                 {response && (

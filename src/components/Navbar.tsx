@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import "./Navbar.css"
+import { NavHashLink } from 'react-router-hash-link';
 
 export default function Navbar() {
     return (
@@ -23,13 +24,13 @@ export default function Navbar() {
 
             <div className="collapse navbar-collapse" id="navbarNav">
                 <div className="navbar-nav ms-auto">
-                    <NavLink className="nav-link" to="/">
+                    <NavHashLink className="nav-link" to="/">
                         ホーム
-                    </NavLink>
+                    </NavHashLink>
 
-                    <NavLink className="nav-link" to="/search">
+                    <NavHashLink className="nav-link" smooth to="/#search">
                         物件を探す
-                    </NavLink>
+                    </NavHashLink>
                 </div>
             </div>
         </nav>

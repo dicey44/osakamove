@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { NavHashLink } from "react-router-hash-link"
 
 export default function Footer() {
     return (
@@ -17,14 +17,14 @@ export default function Footer() {
                         <h3 className="h6 fw-bold mb-3">メニュー</h3>
                         <ul className="list-unstyled">
                             <li className="mb-2">
-                                <Link to="/" className="text-secondary text-decoration-none">
+                                <NavHashLink to="/" className="text-secondary text-decoration-none">
                                     ホーム
-                                </Link>
+                                </NavHashLink>
                             </li>
                             <li className="mb-2">
-                                <Link to="/search" className="text-secondary text-decoration-none">
+                                <NavHashLink to="/#search" className="text-secondary text-decoration-none">
                                     物件を探す
-                                </Link>
+                                </NavHashLink>
                             </li>
                         </ul>
                     </div>

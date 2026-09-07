@@ -1,12 +1,12 @@
 .navbar {
-    background-color: var(--nippon-surface);
+    background-color: var(--nippon-surface) !important
 }
 
-.nav-link, .nav-link:visited {
-    color: var(--nippon-primary);
+.nav-link, .nav-link:visited, .nav-link:active {
+    color: var(--nippon-muted) !important;
 }
 
-.nav-link:hover, .nav-link:active {
+.nav-link:hover {
      color: var(--nippon-primary-hover) !important;
 }
 
@@ -16,6 +16,6 @@
 }
 
 .navbar-brand, .navbar-brand:visited {
-    color: black;
+    color: black !important
 }
 

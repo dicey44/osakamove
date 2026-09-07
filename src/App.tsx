@@ -2,8 +2,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css"
 
 import Home from "./pages/Home";
-import Search from "./pages/Search";
-import ListingDetails from "./pages/ListingDetails";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import PropertyDetails from "./pages/PropertyDetails";
@@ -15,8 +13,6 @@ function App() {
 
           <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/search" element={<Search />} />
-              <Route path="/listings/:id" element={<ListingDetails />} />
               <Route path="/properties/:id" element={<PropertyDetails />}/>
           </Routes>
 
