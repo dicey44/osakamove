@@ -6,6 +6,7 @@ import Search from "./pages/Search";
 import ListingDetails from "./pages/ListingDetails";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import PropertyDetails from "./pages/PropertyDetails";
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/search" element={<Search />} />
               <Route path="/listings/:id" element={<ListingDetails />} />
+              <Route path="/properties/:id" element={<PropertyDetails />}/>
           </Routes>
 
           <Footer />

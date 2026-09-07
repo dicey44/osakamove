@@ -1,4 +1,5 @@
 import type { Property } from "../types/property";
+import { Link } from "react-router-dom";
 
 type PropertyCardProps = {
     property: Property;
@@ -33,9 +34,9 @@ function PropertyCard({ property }: PropertyCardProps) {
                     <p className="card-text">
                         {property.ward}
                     </p>
-                    <button className="btn btn-primary mt-auto">
+                    <Link className="btn btn-primary mt-auto" to={`/properties/${property.id}`}>
                                         詳細を見る
-                    </button>
+                    </Link>
                 </div>
             </div>
     );
