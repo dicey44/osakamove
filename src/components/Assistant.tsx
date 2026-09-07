@@ -81,6 +81,11 @@ function Assistant() {
                     </div>
                 )}
 
+                {
+                    (response && matchedProperties.length === 0) ? 
+                    <h3>該当する物件が見つかりません</h3> : ""
+                }
+
                 {matchedProperties.length > 0 && (
                     <div className="mt-5">
                         <h2>おすすめ物件</h2>
