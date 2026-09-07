@@ -4,10 +4,12 @@ import { findRecommendedProperties } from "../utils/findRecommendedProperties";
 import { properties } from "../data/properties";
 import type { Property } from "../types/property";
 import PropertyCard from "./PropertyCard";
+import type { AIResponse } from "../types/ai";
 
 function Assistant() {
     const [input, setInput] = useState("");
-    const [response, setResponse] = useState<any>(null);
+    const [response, setResponse] = useState<AIResponse | null>(null);
+    const [error, setError] = useState<string | null>(null);
     const [loading, setLoading] = useState(false);
     const [matchedProperties, setMatchedProperties] = useState<Property[]>([])
 
@@ -15,7 +17,8 @@ function Assistant() {
         if (!input.trim()) return;
 
         setLoading(true);
-        setResponse("");
+        setResponse(null);
+        setError(null);
 
         try {
             const result = await fetch("http://localhost:3001/api/ai-test", {
@@ -41,7 +44,7 @@ function Assistant() {
             setResponse(data.response);
         } catch (error) {
             console.error(error);
-            setResponse("AIに接続できませんでした。");
+            setError("AIに接続できませんでした。");
         } finally {
             setLoading(false);
         }
@@ -84,7 +87,7 @@ function Assistant() {
 
                 {response && (
                     <div className="mt-4 ai-response">
-                        {response.areas.map((area: any) => (
+                        {response.areas.map((area) => (
                             <div key={area.name} className="mb-4">
                                 <h3>{area.name}</h3>
                                 <p>{area.reason}</p>
@@ -112,6 +115,11 @@ function Assistant() {
                             ))}
                             
                         </div>
+                    </div>
+                )}
+                {error && (
+                    <div className="alert alert-danger mt-4">
+                        {error}
                     </div>
                 )}
             </div>
