@@ -51,14 +51,14 @@ function Assistant() {
     return (
         <section className="py-5">
             <div className="container">
-                <h2>AIアシスタント</h2>
+                <h2>どこへ引っ越して、どんな住まいをお探しですか ?</h2>
 
                 <textarea
                     className="form-control mb-3"
                     rows={4}
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
-                    placeholder="メッセージを入力してください"
+                    placeholder="例 : 大阪に引っ越す予定です。家賃は月10万円以下で、都心までの通勤時間は30分以内にしたいです。"
                 />
 
                 <button
