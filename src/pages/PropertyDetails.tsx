@@ -22,7 +22,7 @@ export default function PropertyDetails() {
         
         <section className="py-5 bg-light">
             <div className="container">
-                <Link to="/" className="btn btn-outline-secondary mb-4">
+                <Link to="/osakamove" className="btn btn-outline-secondary mb-4">
                     <i className="bi bi-arrow-left me-2"></i>
                     ホームに戻る
                 </Link>

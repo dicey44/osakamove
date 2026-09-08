@@ -15,7 +15,7 @@ export const properties: Property[] = [
         line: "地下鉄谷町線",
         yearsOld: 12,
         petFriendly: false,
-        image: "/apartments/apartment-1.webp"
+        image: "/osakamove/apartments/apartment-1.webp"
     },
     {
         id: 2,
@@ -31,7 +31,7 @@ export const properties: Property[] = [
         line: "ＪＲ東海道本線",
         yearsOld: 34,
         petFriendly: false,
-        image: "/houses/house-1.jpeg"
+        image: "/osakamove/houses/house-1.jpeg"
     },
     {
         id: 3,
@@ -47,7 +47,7 @@ export const properties: Property[] = [
         line: "ＪＲ大阪環状線",
         yearsOld: 8,
         petFriendly: true,
-        image: "/apartments/apartment-2.webp"
+        image: "/osakamove/apartments/apartment-2.webp"
     },
 
     {
@@ -64,7 +64,7 @@ export const properties: Property[] = [
         line: "ＪＲ東海道本線",
         yearsOld: 5,
         petFriendly: true,
-        image: "/apartments/apartment-3.webp"
+        image: "/osakamove/apartments/apartment-3.webp"
     },
 
     {
@@ -81,7 +81,7 @@ export const properties: Property[] = [
         line: "地下鉄御堂筋線",
         yearsOld: 17,
         petFriendly: false,
-        image: "/apartments/apartment-4.webp"
+        image: "/osakamove/apartments/apartment-4.webp"
     },
 
     {
@@ -98,7 +98,7 @@ export const properties: Property[] = [
         line: "地下鉄御堂筋線",
         yearsOld: 11,
         petFriendly: true,
-        image: "/apartments/apartment-5.webp"
+        image: "/osakamove/apartments/apartment-5.webp"
     },
 
     {
@@ -115,7 +115,7 @@ export const properties: Property[] = [
         line: "地下鉄御堂筋線",
         yearsOld: 9,
         petFriendly: false,
-        image: "/apartments/apartment-6.webp"
+        image: "/osakamove/apartments/apartment-6.webp"
     },
 
     {
@@ -132,7 +132,7 @@ export const properties: Property[] = [
         line: "ＪＲ大阪環状線",
         yearsOld: 21,
         petFriendly: true,
-        image: "/houses/house-2.webp"
+        image: "/osakamove/houses/house-2.webp"
     },
 
     {
@@ -149,7 +149,7 @@ export const properties: Property[] = [
         line: "ＪＲ大阪環状線",
         yearsOld: 15,
         petFriendly: false,
-        image: "/apartments/apartment-7.webp"
+        image: "/osakamove/apartments/apartment-7.webp"
     },
 
     {
@@ -166,7 +166,7 @@ export const properties: Property[] = [
         line: "ＪＲ大阪環状線",
         yearsOld: 7,
         petFriendly: true,
-        image: "/apartments/apartment-8.webp"
+        image: "/osakamove/apartments/apartment-8.webp"
     },
 
     {
@@ -183,7 +183,7 @@ export const properties: Property[] = [
         line: "地下鉄今里筋線",
         yearsOld: 27,
         petFriendly: false,
-        image: "/houses/house-3.jpeg"
+        image: "/osakamove/houses/house-3.jpeg"
     },
 
     {
@@ -200,7 +200,7 @@ export const properties: Property[] = [
         line: "地下鉄谷町線",
         yearsOld: 13,
         petFriendly: true,
-        image: "/apartments/apartment-9.webp"
+        image: "/osakamove/apartments/apartment-9.webp"
     },
 
     {
@@ -217,7 +217,7 @@ export const properties: Property[] = [
         line: "地下鉄谷町線",
         yearsOld: 19,
         petFriendly: false,
-        image: "/apartments/apartment-10.webp"
+        image: "/osakamove/apartments/apartment-10.webp"
     },
 
     {
@@ -234,7 +234,7 @@ export const properties: Property[] = [
         line: "地下鉄御堂筋線",
         yearsOld: 6,
         petFriendly: true,
-        image: "/apartments/apartment-11.webp"
+        image: "/osakamove/apartments/apartment-11.webp"
     },
 
     {
@@ -251,7 +251,7 @@ export const properties: Property[] = [
         line: "ＪＲ阪和線",
         yearsOld: 18,
         petFriendly: true,
-        image: "/houses/house-4.webp"
+        image: "/osakamove/houses/house-4.webp"
     },
 
     {
@@ -268,7 +268,7 @@ export const properties: Property[] = [
         line: "ＪＲ東海道本線",
         yearsOld: 10,
         petFriendly: false,
-        image: "/apartments/apartment-12.webp"
+        image: "/osakamove/apartments/apartment-12.webp"
     },
 
     {
@@ -285,7 +285,7 @@ export const properties: Property[] = [
         line: "ＪＲ大阪環状線",
         yearsOld: 22,
         petFriendly: true,
-        image: "/apartments/apartment-13.webp"
+        image: "/osakamove/apartments/apartment-13.webp"
     },
 
     {
@@ -302,7 +302,7 @@ export const properties: Property[] = [
         line: "地下鉄四つ橋線",
         yearsOld: 4,
         petFriendly: true,
-        image: "/apartments/apartment-14.jpeg"
+        image: "/osakamove/apartments/apartment-14.jpeg"
     },
 
     {
@@ -319,7 +319,7 @@ export const properties: Property[] = [
         line: "地下鉄谷町線",
         yearsOld: 31,
         petFriendly: false,
-        image: "/houses/house-5.webp"
+        image: "/osakamove/houses/house-5.webp"
     },
 
     {
@@ -336,7 +336,7 @@ export const properties: Property[] = [
         line: "地下鉄四つ橋線",
         yearsOld: 12,
         petFriendly: true,
-        image: "/apartments/apartment-15.jpeg"
+        image: "/osakamove/apartments/apartment-15.jpeg"
     },
 
     {
@@ -353,7 +353,7 @@ export const properties: Property[] = [
         line: "ＪＲ大阪環状線",
         yearsOld: 16,
         petFriendly: false,
-        image: "/apartments/apartment-16.webp"
+        image: "/osakamove/apartments/apartment-16.webp"
     },
 
     {
@@ -370,7 +370,7 @@ export const properties: Property[] = [
         line: "地下鉄谷町線",
         yearsOld: 14,
         petFriendly: true,
-        image: "/apartments/apartment-17.jpeg"
+        image: "/osakamove/apartments/apartment-17.jpeg"
     },
     {
         id: 23,
@@ -386,7 +386,7 @@ export const properties: Property[] = [
         line: "京阪中之島線",
         yearsOld: 7,
         petFriendly: true,
-        image: "/apartments/apartment-18.webp"
+        image: "/osakamove/apartments/apartment-18.webp"
     },
 
     {
@@ -403,7 +403,7 @@ export const properties: Property[] = [
         line: "近鉄南大阪線",
         yearsOld: 24,
         petFriendly: true,
-        image: "/houses/house-6.webp"
+        image: "/osakamove/houses/house-6.webp"
     },
 
     {
@@ -420,6 +420,6 @@ export const properties: Property[] = [
         line: "地下鉄御堂筋線",
         yearsOld: 9,
         petFriendly: false,
-        image: "/apartments/apartment-19.webp"
+        image: "/osakamove/apartments/apartment-19.webp"
     }
 ]

@@ -17,12 +17,12 @@ export default function Footer() {
                         <h3 className="h6 fw-bold mb-3">メニュー</h3>
                         <ul className="list-unstyled">
                             <li className="mb-2">
-                                <Link to="/" className="text-secondary text-decoration-none">
+                                <Link to="/osakamove" className="text-secondary text-decoration-none">
                                     ホーム
                                 </Link>
                             </li>
                             <li className="mb-2">
-                                <Link to="/" className="text-secondary text-decoration-none">
+                                <Link to="/osakamove" className="text-secondary text-decoration-none">
                                     物件を探す
                                 </Link>
                             </li>

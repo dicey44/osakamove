@@ -12,8 +12,8 @@ function App() {
           <Navbar />
 
           <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/properties/:id" element={<PropertyDetails />}/>
+              <Route path="/osakamove" element={<Home />} />
+              <Route path="/osakamove/properties/:id" element={<PropertyDetails />}/>
           </Routes>
 
           <Footer />
