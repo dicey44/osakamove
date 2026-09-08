@@ -10,7 +10,7 @@ OsakaMoveは、大阪への引っ越しを検討しているユーザーが、�
 
 <img src="./src/assets/screenshots/Home-top.png\" alt="OsakaMove ホームページ" width="800"/>
 <img src="./src/assets/screenshots/Home-bottom.png" alt="OsakaMove ホームページ 2" width="800" />
-<img src="./src/assets/screenshots/Assistant-2.png" alt="OsakaMove AI" width="800" />
+<img src="./src/assets/screenshots/assistant-2.png" alt="OsakaMove AI" width="800" />
 <img src="./src/assets/screenshots/details-page.png" alt="OsakaMove 物件ページ" width="800" />
 
 ## ✨ 主な機能
