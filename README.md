@@ -6,6 +6,13 @@ OsakaMoveは、大阪への引っ越しを検討しているユーザーが、�
 
 ユーザーの入力をAIが分析し、大阪のおすすめエリアと物件検索条件を抽出。その結果をアプリケーション側の検索ロジックと組み合わせることで、登録されている物件の中から条件に合った物件を表示します。
 
+## 📸 スクリーンショット
+
+<img src="./src/assets/screenshots/Home-top.png\" alt="OsakaMove ホームページ" width="800"/>
+<img src="./src/assets/screenshots/Home-bottom.png" alt="OsakaMove ホームページ 2" width="800" />
+<img src="./src/assets/screenshots/Assistant-2.png" alt="OsakaMove AI" width="800" />
+<img src="./src/assets/screenshots/details-page.png" alt="OsakaMove 物件ページ" width="800" />
+
 ## ✨ 主な機能
 
 ### 🤖 AI引っ越しアシスタント
