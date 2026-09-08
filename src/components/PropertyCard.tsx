@@ -34,7 +34,7 @@ function PropertyCard({ property }: PropertyCardProps) {
                     <p className="card-text">
                         {property.ward}
                     </p>
-                    <Link className="btn btn-primary mt-auto" to={`/osakamove/properties/${property.id}`} target="_blank">
+                    <Link className="btn btn-primary mt-auto" to={`/osakamove/properties/${property.id}`} target="_blank" rel="noopener noreferrer">
                                         詳細を見る
                     </Link>
                 </div>
