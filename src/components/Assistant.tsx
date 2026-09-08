@@ -21,7 +21,7 @@ function Assistant() {
         setError(null);
 
         try {
-            const result = await fetch("http://localhost:3001/api/ai-test", {
+            const result = await fetch("https://osakamove-api.onrender.com/api/ai-test", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
