@@ -1,7 +1,21 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import "./Navbar.css"
 
 export default function Navbar() {
+
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const handleSearchClick = () => {
+        if (location.pathname === "/osakamove") {
+            document.getElementById("search")?.scrollIntoView({
+                behavior: "smooth",
+            });
+        } else {
+            navigate("/osakamove#search");
+        }
+    };
+
     return (
         <nav className="navbar navbar-expand-lg px-4">
             <NavLink className="navbar-brand fw-bold" to="/osakamove">
@@ -27,9 +41,9 @@ export default function Navbar() {
                         ホーム
                     </NavLink>
 
-                    <a className="nav-link" href="#search">
+                    <button className="nav-link" onClick={handleSearchClick}>
                         物件を探す
-                    </a>
+                    </button>
                 </div>
             </div>
         </nav>

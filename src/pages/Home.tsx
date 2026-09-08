@@ -14,6 +14,14 @@ function Home() {
     };
 
     useEffect(() => {
+        if (window.location.hash === "#search") {
+            document.getElementById("search")?.scrollIntoView({
+                behavior: "smooth",
+            });
+        }
+    }, []);
+
+    useEffect(() => {
         const sections = document.querySelectorAll(".scroll-animation");
 
         const observer = new IntersectionObserver(
